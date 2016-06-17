@@ -12,6 +12,7 @@ flag = 1
 
 def exist_watcher(event):
     global cv
+    print "!!!!!!!!!!!!!!!!!!!!!1zk :", zk
     if event.type != zookeeper.DELETED_EVENT:
         r = zk.exists(event.path, watchmethod(exist_watcher))
     print "#####before callback acquire"

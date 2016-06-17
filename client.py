@@ -55,7 +55,7 @@ if __name__ == "__main__":
     print "children:", l
     #work_v = zk.get("/work")
     #print "work_v:", work_v
-    print "dir zookeeper", dir(zookeeper)
+    lock_name = zk_lock.get_lock(zk, "/lock")
     exit()
     logger = init_logger()
 
